@@ -1,0 +1,9 @@
+<div class="row">
+  <aside class="col-sm-4">
+        <img class="rounded img-fluid" src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
+  </aside>
+  <div class="col-sm-8">
+    <h2 class="offset-md-2"><%= @user.name %></h2>
+    <h2 class="offset-md-2"><%= @user.email %></h2>
+  </div>
+</div>
