@@ -1,6 +1,10 @@
-<div class="center jumbotron">
-  <div class="text-center">
-    <h1>Search for YouTube</h1>
-    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+<% if logged_in? %>
+  <p>作成中</p>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>Search for YouTube</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
   </div>
-</div>
+<% end %>
