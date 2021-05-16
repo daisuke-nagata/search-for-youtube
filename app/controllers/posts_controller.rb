@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:destroy]
 
   def index
-    @posts = Post.all
+    @search = Post.ransack(params[:q])
+    @posts = @search.result 
   end
 
   def new
