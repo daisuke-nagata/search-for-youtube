@@ -1,0 +1,14 @@
+<% @posts.each do |post| %>
+  <table>
+    <tr>
+      <th>YouTuber名</th>
+      <th>動画</th>
+    </tr>
+    <tr>
+      <td><%= post.youtuber_name %></td>
+      <td><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" height="315" src="https://www.youtube.com/embed/<%= post.url.last(11) %>" width="560"></iframe></td>
+      <td><%= link_to "削除", post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %></td>
+    </tr>
+  </table>
+<% end %>
+

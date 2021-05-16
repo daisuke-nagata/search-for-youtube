@@ -1,4 +1,12 @@
 <div class="row">
+  <%= form_with(model: @post, local: true) do |f| %>
+    <%= f.text_field :youtuber_name, placeholder: 'youtuber名' %>
+    <%= f.text_field :url, placeholder: 'url' %>
+    <%= f.submit '投稿する' %>
+  <% end %>
+</div>
+
+<div class="row">
   <aside class="col-sm-4">
         <img class="rounded img-fluid" src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
   </aside>
